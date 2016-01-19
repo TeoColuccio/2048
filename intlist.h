@@ -9,9 +9,9 @@ struct Intlist {
 typedef struct Intlist Intlist;
 typedef struct Intlist* IntlistPtr;
 
-int intlist_push(IntlistPtr list, int value);
+void intlist_push(IntlistPtr list, int value);
 void intlist_dump(IntlistPtr list);
 void intlist_clear(IntlistPtr list);
-void intlist_get(IntlistPtr list, int index);
+int intlist_get(IntlistPtr list, int index);
 
 #endif
