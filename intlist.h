@@ -13,6 +13,6 @@ void intlist_push(IntlistPtr list, int value);
 void intlist_dump(IntlistPtr list);
 void intlist_clear(IntlistPtr list);
 int intlist_get(IntlistPtr list, int index);
-int intlist_len();
+int intlist_len(IntlistPtr list);
 
 #endif

@@ -4,7 +4,7 @@
 
 void intlist_push(IntlistPtr list, int value)
 {
-  if (list->size > 0) {  
+  if (list->size < 16 ) {  
   list->values[list->size] = value;
   list->size++;
   }
@@ -29,7 +29,7 @@ int intlist_get(IntlistPtr list, int index)
   return list->values[index];
 }
 
-int intlist_len()
+int intlist_len(IntlistPtr list)
 {
-  return 0;
+ return list->size;
 }
