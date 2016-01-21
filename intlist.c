@@ -12,11 +12,12 @@ void intlist_push(IntlistPtr list, int value)
 
 void intlist_dump(IntlistPtr list)
 {
-  int conta;
+  int i=0;
 
-  for (conta=0; conta<16; conta++) {
-    printf("%d\n",list->values[conta]);
-  }
+  while (list->values[i] != 0) {
+    printf("%d\n", list->values[i]);
+    i++;
+  } 
 }
 
 void intlist_clear(IntlistPtr list)
