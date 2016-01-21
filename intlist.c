@@ -14,8 +14,8 @@ void intlist_dump(IntlistPtr list)
 {
   int conta;
 
-  for (conta=0; conta<15; conta++) {
-    printf("%d",list->values[conta]);
+  for (conta=0; conta<16; conta++) {
+    printf("%d\n",list->values[conta]);
   }
 }
 

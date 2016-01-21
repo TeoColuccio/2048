@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#include "intlist.h"
+#include "intlist.c"
 
-int main()
+int main ()
 {
   Intlist list;
 
