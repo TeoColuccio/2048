@@ -12,11 +12,9 @@ void intlist_push(IntlistPtr list, int value)
 
 void intlist_dump(IntlistPtr list)
 {
-  int i=0;
-
-  while (list->values[i] != 0) {
-    printf("%d\n", list->values[i]);
-    i++;
+  while (list->values[list->size] < list->size) {
+    printf("%d\n", list->values[list->size]);
+    list->size++;
   } 
 }
 
