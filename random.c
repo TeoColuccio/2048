@@ -4,13 +4,13 @@
 
 #include "random.h"
 
-void init () {
+void random_init () {
   srand(time(NULL));
 }
 
-int between(int min, int max) { 
+int random_between(int min, int max) { 
   int random = 0;
 
-  random = (rand()%max)+min;
+  random =rand()%(max-min+1)+min;
   return random;
 }

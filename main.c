@@ -13,7 +13,8 @@ int main ()
   intlist_push(&list, 202);
   intlist_dump(&list);
   
-  printf("%d\n", between(1,16));
+  random_init();
+  printf("%d\n", random_between(0,16));
   
   return 0;
 }
