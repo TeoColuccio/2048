@@ -17,7 +17,7 @@ int main ()
   random_init(); 
   
   for (i=0;i<10;i++) {
-  printf("%d\n", random_between(30,32));
+  printf("%d\n", random_between(30,31));
   }
 
   return 0;

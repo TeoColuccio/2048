@@ -9,8 +9,5 @@ void random_init () {
 }
 
 int random_between(int min, int max) { 
-  int random = 0;
-
-  random =rand()%(max-min)+(min);
-  return random;
+  return rand()%(max-min)+(min);
 }
