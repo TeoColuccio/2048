@@ -8,7 +8,7 @@ struct tile {
 typedef struct tile Tile;
 typedef struct tile* TilePtr;
 
-void tile_make(TilePtr t, int n);
+Tile tile_make (int value);
 int tile_get(TilePtr t);
 void tile_dump(TilePtr t);
 

@@ -2,9 +2,9 @@
 
 #include "tile.h"
 
-void tile_make(TilePtr t, int n)
+Tile tile_make(int value)
 {
-  t->num = n;
+  t->num = value;
 }
 int tile_get(TilePtr t)
 {
