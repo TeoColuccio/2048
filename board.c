@@ -19,5 +19,5 @@ void board_init(BoardPtr b)
     b->ptr_tile[i] = NULL;
   }
   
-  b->pos_free = 16;
+ intlist_clear(b->pos_free);  
 }

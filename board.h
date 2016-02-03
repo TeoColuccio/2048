@@ -2,10 +2,11 @@
 #define BOARD_H
 
 #include "tile.h"
+#include "intlist.h"
 
 struct board {
   Tile* ptr_tile[16];
-  int pos_free;
+  Intlist* pos_free;
 };
 
 typedef struct board Board;
