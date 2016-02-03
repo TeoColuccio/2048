@@ -12,6 +12,6 @@ typedef struct board Board;
 typedef struct board* BoardPtr;
 
 void board_set(BoardPtr b, TilePtr tile, int index);
-Tile board_get(BoardPtr b, int index);
+Tile* board_get(BoardPtr b, int index);
 
 #endif
