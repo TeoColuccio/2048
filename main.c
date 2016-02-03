@@ -11,6 +11,7 @@ int main ()
   Intlist list;
   Tile t;
   int i;
+  Board game_board;
 
   intlist_clear(&list);
   intlist_push(&list, 2130);
@@ -26,6 +27,11 @@ int main ()
   tile_make(8);
   printf("%d\n", tile_get(&t));
   tile_dump(&t);
+
+  /* questa istruzione provochera'
+   * un errore di segmentazione
+   */
+  board_init(&game_board);
 
   return 0;
 }
