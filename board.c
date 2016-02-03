@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "board.h"
 
 void board_set(BoardPtr b, TilePtr tile, int index)
@@ -10,3 +11,13 @@ Tile* board_get(BoardPtr b, int index)
   return b->ptr_tile[index];
 }
 
+void board_init(BoardPtr b)
+{
+  int i;
+
+  for (i=0; i<16; i++) {
+    b->ptr_tile[i] = NULL;
+  }
+  
+  b->pos_free = 16;
+}
