@@ -4,6 +4,7 @@
 #include "intlist.h"
 #include "random.h"
 #include "tile.h"
+#include "board.h"
 
 int main ()
 {

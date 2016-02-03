@@ -1,6 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include "tile.h"
+
 struct board {
   Tile* ptr_tile[16];
   int pos_free;
@@ -9,7 +11,7 @@ struct board {
 typedef struct board Board;
 typedef struct board* BoardPtr;
 
-void board_set(BoardPtr b, TilePtr, int index);
+void board_set(BoardPtr b, TilePtr tile, int index);
 Tile board_get(BoardPtr b, int index);
 
-
+#endif
