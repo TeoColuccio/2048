@@ -28,9 +28,6 @@ int main ()
   printf("%d\n", tile_get(&t));
   tile_dump(&t);
 
-  /* questa istruzione provochera'
-   * un errore di segmentazione
-   */
   board_init(&game_board);
 
   return 0;
