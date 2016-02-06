@@ -6,7 +6,7 @@
 
 struct board {
   Tile* ptr_tile[16];
-  Intlist* pos_free;
+  Intlist pos_free;
 };
 
 typedef struct board Board;
