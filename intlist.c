@@ -14,9 +14,9 @@ void intlist_dump(IntlistPtr list)
 {
     int i = 0;
     for (i=0; i < list->size; i++) {
-    printf("%d\n", list->values[i]);
-    
+    printf("%d ", list->values[i]); 
      }
+    printf("\n");
 }
 void intlist_clear(IntlistPtr list)
 {
