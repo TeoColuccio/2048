@@ -33,14 +33,17 @@ void board_dump(BoardPtr b)
 
   printf("Il numero totale delle celle e': %d\n", intlist_len(&(b->pos_free)));
   
-  intlist_dump(&(b->pos_free));
+
 
   printf("Il contenuto delle celle e': \n");
   for (i=0; i < 16; i++) {
     if (b->ptr_tile[i] == NULL) {
     celle_libere++;
     }
+  printf("%d: ", i);
   tile_dump(b->ptr_tile[i]);
   }
   printf("Il numero delle celle libere e': %d\n", celle_libere);
+  
+  intlist_dump(&(b->pos_free));
 }
