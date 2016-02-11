@@ -29,9 +29,10 @@ void board_init(BoardPtr b)
 
 void board_dump(BoardPtr b)
 {
+  int i, celle_libere = 0;
+
   printf("Le celle sono: %d\n", intlist_len(&(b->pos_free)));
   intlist_dump(&(b->pos_free));
-  int i, celle_libere = 0;
 
   for (i=0; i<16; i++) {
     if (b->ptr_tile[i] == NULL) {
@@ -39,5 +40,4 @@ void board_dump(BoardPtr b)
     }
   }
   printf("Il numero delle celle libere e': %d\n", celle_libere);
-
 }
