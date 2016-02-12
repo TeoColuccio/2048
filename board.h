@@ -3,6 +3,7 @@
 
 #include "tile.h"
 #include "intlist.h"
+#include "random.h"
 
 struct board {
   Tile* ptr_tile[16];
@@ -16,5 +17,6 @@ void board_set(BoardPtr b, TilePtr tile, int index);
 Tile* board_get(BoardPtr b, int index);
 void board_init(BoardPtr b);
 void board_dump(BoardPtr b);
+void board_add_tile(BoardPtr b, TilePtr t);
 
 #endif

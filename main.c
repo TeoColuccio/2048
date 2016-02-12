@@ -8,9 +8,12 @@
 
 int main ()
 {
+  Tile t;
   Board game_board;
   
+  tile_make(7);
   board_init(&game_board);
+  board_add_tile(&game_board, &t);
   board_dump(&game_board);
 
   return 0;

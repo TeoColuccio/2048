@@ -45,3 +45,16 @@ void board_dump(BoardPtr b)
   printf("Celle libere: \n"); 
   intlist_dump(&(b->pos_free));
 }
+
+void board_add_tile(BoardPtr b, TilePtr t)
+{
+  int rand;
+
+  random_init();
+  rand = random_between(0, 16);
+
+  while (b->ptr_tile[rand] != NULL) {
+    rand = random_between(0, 16);
+  }
+  b->ptr_tile[rand] = t; 
+}
