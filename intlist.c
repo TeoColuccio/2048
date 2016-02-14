@@ -18,6 +18,7 @@ void intlist_dump(IntlistPtr list)
      }
     printf("\n");
 }
+
 void intlist_clear(IntlistPtr list)
 {
   list->size=0;
