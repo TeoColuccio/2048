@@ -52,5 +52,5 @@ void board_add_tile(BoardPtr b, TilePtr t)
   
   len = intlist_len(&(b->pos_free));
   random_init();
-  rand = random_between(b->pos_free.values[0], b->pos_free.values[len]); 
+  rand = random_between(b->pos_free.values[0], b->pos_free.values[len-1]); 
 }
