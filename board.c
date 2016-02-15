@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <malloc.h>
+
 #include "board.h"
 
 void board_set(BoardPtr b, TilePtr tile, int index)
@@ -12,9 +14,8 @@ Tile* board_get(BoardPtr b, int index)
 }
 
 void board_init(BoardPtr b)
-{
-  int i;
-  int valori;
+{ 
+  int i, valori;
 
   for (i=0; i<16; i++) {
     b->ptr_tile[i] = NULL;
@@ -52,7 +53,9 @@ void board_add_tile(BoardPtr b, TilePtr t)
   
   len = intlist_len(&(b->pos_free));
   random_init();
-  rand = random_between(0, len-1); 
-  
-  b->ptr_tile[rand] = t;
+  rand = random_between(0, len); 
+  Tile *tile;
+  tile = malloc(sizeof(Tile));
+
+  board_set(b, tile, rand);
 }
