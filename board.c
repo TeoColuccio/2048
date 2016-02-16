@@ -60,12 +60,10 @@ void board_add_tile(BoardPtr b, TilePtr t)
 
   value_tile = random_between(0, 11);
   if (value_tile == 0) {
-    tile_make(4);
+    *tile = tile_make(4);
   }
   else
-    tile_make(2);
-
-  tile = t;
+    *tile = tile_make(2);
 
   board_set(b, tile, rand);
 }
