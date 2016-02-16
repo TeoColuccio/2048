@@ -51,8 +51,7 @@ void board_add_tile(BoardPtr b, TilePtr t)
 {
   int rand, len, value_tile;
   
-  len = intlist_len(&(b->pos_free));
-  random_init();
+  len = intlist_len(&(b->pos_free)); 
   rand = random_between(0, len);
 
   Tile *tile;
@@ -66,4 +65,10 @@ void board_add_tile(BoardPtr b, TilePtr t)
     *tile = tile_make(2);
 
   board_set(b, tile, rand);
+  intlist_dump(&(b->pos_free));
+}
+
+void board_destroy(BoardPtr b)
+{
+  free(b->ptr_tile); 
 }

@@ -18,5 +18,6 @@ Tile* board_get(BoardPtr b, int index);
 void board_init(BoardPtr b);
 void board_dump(BoardPtr b);
 void board_add_tile(BoardPtr b, TilePtr t);
+void board_destroy(BoardPtr b);
 
 #endif
