@@ -49,13 +49,23 @@ void board_dump(BoardPtr b)
 
 void board_add_tile(BoardPtr b, TilePtr t)
 {
-  int rand, len;
+  int rand, len, value_tile;
   
   len = intlist_len(&(b->pos_free));
   random_init();
-  rand = random_between(0, len); 
+  rand = random_between(0, len);
+
   Tile *tile;
   tile = malloc(sizeof(Tile));
+
+  value_tile = random_between(0, 11);
+  if (value_tile == 0) {
+    tile_make(4);
+  }
+  else
+    tile_make(2);
+
+  tile = t;
 
   board_set(b, tile, rand);
 }
