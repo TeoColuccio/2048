@@ -70,5 +70,12 @@ void board_add_tile(BoardPtr b, TilePtr t)
 
 void board_destroy(BoardPtr b)
 {
-  free(b->ptr_tile); 
+  int i;
+
+  for (i=0; i<16; i++) {
+    if (b->ptr_tile[i] != NULL) {
+      free(b->ptr_tile[i]);
+    }
+  }
 }
+
