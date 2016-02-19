@@ -68,7 +68,7 @@ void board_add_tile(BoardPtr b, TilePtr t)
   
   intlist_clear(&(b->pos_free)); 
   for (i=0; i<16; i++) {
-    if (b->pos_free.values[i] != rand) {
+    if (b->ptr_tile[i] == NULL) {
     intlist_push(&(b->pos_free), i);
     }
   }
