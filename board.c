@@ -15,17 +15,13 @@ Tile* board_get(BoardPtr b, int index)
 
 void board_init(BoardPtr b)
 { 
-  int i, valori;
+  int i;
 
   for (i=0; i<16; i++) {
     b->ptr_tile[i] = NULL;
   }
   
-  intlist_clear(&(b->pos_free));
-  
-  for (valori=0; valori<16; valori++) {
-    intlist_push(&(b->pos_free), valori);
-  }
+  board_update_freepos(b);
 }
 
 void board_update_freepos(BoardPtr b)
