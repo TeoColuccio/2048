@@ -16,8 +16,9 @@ typedef struct board* BoardPtr;
 void board_set(BoardPtr b, TilePtr tile, int index);
 Tile* board_get(BoardPtr b, int index);
 void board_init(BoardPtr b);
+void board_update_freepos(BoardPtr b);
 void board_dump(BoardPtr b);
-void board_add_tile(BoardPtr b, TilePtr t);
+void board_add_tile(BoardPtr b);
 void board_destroy(BoardPtr b);
 
 #endif

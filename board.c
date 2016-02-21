@@ -28,6 +28,18 @@ void board_init(BoardPtr b)
   }
 }
 
+void board_update_freepos(BoardPtr b)
+{
+  int i;
+  
+  intlist_clear(&(b->pos_free)); 
+  for (i=0; i<16; i++) {
+    if (b->ptr_tile[i] == NULL) {
+    intlist_push(&(b->pos_free), i);
+    }
+  }
+}
+
 void board_dump(BoardPtr b)
 {
   int i, celle_libere = 0;
@@ -43,13 +55,13 @@ void board_dump(BoardPtr b)
   tile_dump(b->ptr_tile[i]);
   }
   printf("Il numero delle celle libere e': %d\n", celle_libere);
-  printf("Celle libere: \n"); 
+  printf("Celle libere: \n");
   intlist_dump(&(b->pos_free));
 }
 
 void board_add_tile(BoardPtr b)
 {
-  int index, len, value_tile, i;
+  int index, len, value_tile;
   
   len = intlist_len(&(b->pos_free)); 
   index = random_between(0, len);
@@ -65,13 +77,7 @@ void board_add_tile(BoardPtr b)
     *tile = tile_make(2);
 
   board_set(b, tile, index);
-  
-  intlist_clear(&(b->pos_free)); 
-  for (i=0; i<16; i++) {
-    if (b->ptr_tile[i] == NULL) {
-    intlist_push(&(b->pos_free), i);
-    }
-  }
+  board_update_freepos(b);
 }
 
 void board_destroy(BoardPtr b)
