@@ -91,8 +91,8 @@ void board_move_tile(BoardPtr b, int index_origin, int index_destinazione)
 {
   if (b->ptr_tile[index_origin] != NULL) {
     b->ptr_tile[index_destinazione] = b->ptr_tile[index_origin];
+    b->ptr_tile[index_origin] == NULL;
+    board_update_freepos(b);
   }
-  b->ptr_tile[index_origin] == NULL;
-  board_update_freepos(b);
 }
 
