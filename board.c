@@ -90,8 +90,8 @@ void board_destroy(BoardPtr b)
 void board_move_tile(BoardPtr b, int index_origin, int index_destinazione)
 {
   if (board_get(b, index_origin) != NULL && board_get(b, index_destinazione) == NULL) {
-    board_set(b, b->ptr_tile[index_origin], index_destinazione);
-    b->ptr_tile[index_origin] = NULL;
+    board_set(b, board_get(b, index_origin), index_destinazione);
+    board_set(b, NULL, index_origin);
     board_update_freepos(b);
   } 
 }
