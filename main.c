@@ -20,7 +20,7 @@ int main ()
 
   board_move_tile(&game_board, 8, 7);
   board_dump(&game_board);
-
+  board_rotate(&game_board);
   board_destroy(&game_board);
 
   return 0;

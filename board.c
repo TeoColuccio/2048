@@ -96,3 +96,13 @@ void board_move_tile(BoardPtr b, int index_origin, int index_destinazione)
   } 
 }
 
+void board_rotate(BoardPtr b)
+{
+  int r ,c;
+  for (r = 0; r < 16; r++) { 
+    for (c = 0; c < 4; c++) {
+      printf("%d %d",r, c);
+    }
+  }
+}
+

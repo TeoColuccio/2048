@@ -21,5 +21,6 @@ void board_dump(BoardPtr b);
 void board_add_tile(BoardPtr b);
 void board_destroy(BoardPtr b);
 void board_move_tile(BoardPtr b, int index_origin, int index_destinazione);
+void board_rotate(BoardPtr b);
 
 #endif
