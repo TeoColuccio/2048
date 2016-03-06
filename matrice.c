@@ -7,7 +7,7 @@ int main()
     for (r = 0; r < 4 ; r++) {
       printf("\n");
       for (c = 0; c < 4; c++) {
-        printf("%d \t", i = r*4*c);
+        printf("%d \t", i);
         i++;
       }
     }
